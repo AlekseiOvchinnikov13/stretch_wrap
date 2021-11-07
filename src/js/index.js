@@ -1,10 +1,10 @@
 window.onload = () => {
   const menu = document.getElementById('menu');
-  const nav = document.getElementById('nav');
+  const body = document.querySelector('body');
 
   const menuOnClick = e => {
     menu.classList.toggle('opened');
-    nav.classList.toggle('active');
+    body.classList.toggle('active');
   }
   menu.addEventListener('click', menuOnClick);
 
@@ -15,7 +15,5 @@ window.onload = () => {
       menuOnClick();
       document.getElementById(e.target.dataset.scroll).scrollIntoView({behavior: 'smooth', block: 'start'});
     })
-  )
-
-
+  );
 };

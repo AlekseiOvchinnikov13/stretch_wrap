@@ -39,8 +39,11 @@ a {
 .desktop {
   display: block; }
 
+.container-header {
+  margin: 0 100px; }
+
 .container {
-  margin: 0 150px; }
+  margin: 0 200px; }
 
 .nav-title {
   font-size: 50px;
@@ -86,7 +89,7 @@ header {
     top: 0;
     height: 100vh;
     min-width: 40%;
-    transition: all .3s ease;
+    transition: all .4s ease;
     background-color: #c9cfd1;
     display: flex;
     justify-content: center;
@@ -102,13 +105,16 @@ header {
         color: black;
         font-size: 35px;
         text-transform: uppercase; }
-  .header-wrapper__list-menu.active {
-    left: 0; }
   .header-wrapper__title {
     font-size: 50px;
     line-height: 100%;
     font-weight: 400;
     text-transform: uppercase; }
+
+.active {
+  overflow: hidden; }
+  .active .header-wrapper__list-menu {
+    left: 0; }
 
 .top-content {
   background-image: url("../img/bottle.png");
@@ -119,7 +125,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: flex-start; }
-  .top-content .container {
+  .top-content .container-header {
     display: flex;
     align-items: center;
     justify-content: flex-start; }
@@ -132,14 +138,77 @@ header {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between; }
   .our-products__cards-wrapper .card {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
-    max-width: 45%; }
+    max-width: 45%;
+    min-height: 905px;
+    margin-bottom: 100px; }
+    .our-products__cards-wrapper .card__img {
+      max-width: 720px;
+      width: 100%;
+      max-height: 480px;
+      height: 100%;
+      object-fit: cover; }
+    .our-products__cards-wrapper .card__title {
+      font-size: 34px;
+      line-height: 1;
+      font-weight: bold;
+      margin: 20px 0; }
+    .our-products__cards-wrapper .card__description ul li {
+      font-size: 26px;
+      line-height: 1.5; }
+    .our-products__cards-wrapper .card__footer {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: flex-end;
+      justify-content: space-between;
+      width: 100%;
+      margin: 20px 0 0; }
+    .our-products__cards-wrapper .card__btn {
+      font-size: 34px;
+      line-height: 2;
+      min-width: 220px;
+      background-color: black;
+      color: white;
+      text-transform: uppercase;
+      border: 1px solid transparent;
+      transition: all .4s ease; }
+      .our-products__cards-wrapper .card__btn:hover, .our-products__cards-wrapper .card__btn:focus {
+        border: 1px solid black;
+        color: black;
+        background-color: white; }
+    .our-products__cards-wrapper .card__cost {
+      font-size: 34px;
+      line-height: 1;
+      font-weight: bold; }
+
+.our-products__summary {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between; }
+  .our-products__summary .products-summary__sale {
+    background: rgba(84, 204, 97, 0.46);
+    padding: 10px 25px;
+    font-weight: bold; }
+  .our-products__summary .products-summary__sale, .our-products__summary .products-summary__table {
+    max-width: 45%;
+    font-size: 34px; }
+  .our-products__summary .products-summary__header {
+    font-weight: bold;
+    line-height: 1;
+    border-bottom: 1px solid black;
+    padding-bottom: 20px;
+    margin-bottom: 20px; }
+  .our-products__summary .products-summary__sale-sum {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
 
 /*@keyframes flyUp {
   50% {
