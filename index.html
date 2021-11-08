@@ -12,7 +12,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap"
+          rel="stylesheet">
 </head>
 <body>
 
@@ -70,7 +71,7 @@
                     </ul>
                 </div>
                 <div class="card__footer">
-                    <button class="card__btn" id="btn-wrap1">купить</button>
+                    <button class="card__btn" id="wrap1">купить</button>
                     <p class="card__cost">230 р/кг</p>
                 </div>
             </div>
@@ -87,7 +88,7 @@
                     </ul>
                 </div>
                 <div class="card__footer">
-                    <button class="card__btn" id="btn-wrap2">купить</button>
+                    <button class="card__btn" id="wrap2">купить</button>
                     <p class="card__cost">175 р/кг</p>
                 </div>
             </div>
@@ -105,7 +106,7 @@
                     </ul>
                 </div>
                 <div class="card__footer">
-                    <button class="card__btn" id="btn-wrap3">купить</button>
+                    <button class="card__btn" id="wrap3">купить</button>
                     <p class="card__cost">225 р/кг</p>
                 </div>
             </div>
@@ -122,7 +123,7 @@
                     </ul>
                 </div>
                 <div class="card__footer">
-                    <button class="card__btn" id="btn-wrap4">купить</button>
+                    <button class="card__btn" id="wrap4">купить</button>
                     <p class="card__cost">120 р/кг</p>
                 </div>
             </div>
@@ -206,12 +207,31 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
+                <p class="modal-title">Корзина</p>
                 <button id="basket-modal-close" class="close">×</button>
             </div>
             <div class="modal-body">
-                <div id="basket-content">
+                <div id="basket-content"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="order" id="btn-order">Оформить заказ</button>
+            </div>
+        </div>
+    </div>
+</div>
 
-                </div>
+<div id="modal-order" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p class="modal-title">Оформление заказа</p>
+                <button id="order-modal-close" class="close">×</button>
+            </div>
+            <div class="modal-body">
+                <div id="order-content"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="order" id="btn-order-accept">Оформить заказ:</button>
             </div>
         </div>
     </div>

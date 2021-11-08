@@ -32,7 +32,7 @@
 
 @media (min-width: 650px) {
   .modal-dialog {
-    max-width: 650px;
+    max-width: 750px;
     max-height: 90vh;
     overflow-y: auto;
     margin: 30px auto;
@@ -62,28 +62,42 @@
   justify-content: space-between;
   height: 50px;
   border-bottom: 1px solid #eceeef;
+  padding: 10px;
+}
+
+.modal-footer {
+  border-bottom: 1px solid #eceeef;
+  padding: 15px;
+}
+
+.order {
+  border: 1px solid transparent;
+  background-color: black;
+  color: white;
+  width: 100%;
+  font-size: 20px;
+  line-height: 54px;
+  text-align: center;
 }
 
 .modal-title {
   margin-top: 0;
   margin-bottom: 0;
   line-height: 1.5;
-  font-size: 1.25rem;
+  font-size: 30px;
   font-weight: 500;
 }
 
 .close {
-  position: absolute;
-  right: 25px;
-  font-family: sans-serif;
   font-size: 38px;
   font-weight: 500;
   line-height: 1;
   color: #000;
-  text-shadow: 0 1px 0 #fff;
-  opacity: 0.5;
+  opacity: 1;
   text-decoration: none;
   cursor: pointer;
+  border: none;
+  background-color: transparent;
 }
 
 .close:focus,
@@ -96,7 +110,7 @@
 .modal-body {
   position: relative;
   flex: 1 1 auto;
-  padding: 0 15px 0 0;
+  padding: 15px;
   overflow: auto;
 }
 
@@ -113,5 +127,11 @@
 @media (max-width: 500px) {
   .close {
     right: 10px;
+  }
+}
+
+.empty-basket {
+  .order:disabled {
+    opacity: .5;
   }
 }
