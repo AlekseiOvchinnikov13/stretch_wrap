@@ -1,32 +1,297 @@
-@media (max-width: 1600px) {
+@media (max-width: 1830px) {
+  .values__card-wrapper .point-card {
+    max-width: 30%;
+  }
+}
 
+@media (max-width: 1440px) {
+  .header-wrapper__list-menu {
+    min-width: 50%;
+  }
+  .container {
+    margin: 0 125px;
+  }
+  .container-header {
+    margin: 0 50px;
+  }
 }
 
 @media (max-width: 1366px) {
+  .header-wrapper__title {
+    font-size: 40px;
+  }
+  .header-wrapper__list-menu ul li a {
+    font-size: 24px;
+  }
+  .top-content__title, .nav-title {
+    font-size: 48px;
+  }
 
+  .our-products__cards-wrapper .card__title {
+    font-size: 30px;
+    min-height: 60px;
+  }
+  .our-products__cards-wrapper .card__description ul li {
+    font-size: 20px;
+  }
+  .our-products__cards-wrapper .card__description {
+    min-height: 190px;
+  }
+  .our-products__cards-wrapper .card__btn {
+    font-size: 20px;
+    min-width: 170px;
+  }
+  .our-products__summary .products-summary__sale, .our-products__summary .products-summary__table {
+    font-size: 20px;
+  }
+  .our-products__summary .products-summary__sale {
+    line-height: 2;
+  }
+  .values__card-wrapper .point-card__img {
+    padding: 50px;
+  }
+  .values__card-wrapper .point-card__title {
+    font-size: 26px;
+    min-height: 52px;
+  }
+  .values__card-wrapper .point-card__description {
+    font-size: 16px;
+  }
+  .contacts__info-card .info-wrapper__inner {
+    font-size: 16px;
+  }
+  .info-wrapper__img {
+    max-width: 40px;
+  }
+  .contacts__info-wrapper {
+    padding-bottom: 75px;
+  }
+  .link-call img, .link-whatsup img {
+    width: 50px;
+    height: 50px;
+  }
+  .link-call {
+    bottom: 100px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .our-products__summary .products-summary__sale-sum span + span {
+    min-width: 50px;
+  }
+  .nav-title, .top-content__title {
+    font-size: 38px;
+  }
+  .nav-title {
+    padding: 50px;
+  }
+  .header-wrapper__title {
+    font-size: 30px;
+  }
+  .header-wrapper__list-menu ul li a {
+    font-size: 20px;
+  }
+  .our-products__cards-wrapper .card__title {
+    font-size: 26px;
+    min-height: 52px;
+    margin: 20px 0;
+  }
+  .our-products__cards-wrapper .card__description ul li {
+    font-size: 18px;
+  }
+  .our-products__cards-wrapper .card__btn {
+    font-size: 18px;
+    min-width: 150px;
+  }
+  .our-products__cards-wrapper .card__cost {
+    font-size: 20px;
+  }
+  .our-products__cards-wrapper .card__description {
+    min-height: 165px;
+  }
+  .our-products__cards-wrapper .card {
+    margin-bottom: 70px;
+  }
+  .values__card-wrapper .point-card__img {
+    min-height: unset;
+    max-height: unset;
+    height: 200px;
+  }
+  .values__card-wrapper .point-card__title {
+    margin: 15px 0;
+  }
 }
 
 @media (max-width: 1024px) {
-  .mobile {
-    display: block;
+  .header-wrapper__list-menu {
+    min-width: 100%;
   }
-  .desktop {
-    display: none;
+  .top-content {
+    background-position: center;
+    background-size: cover;
+    min-height: 40vh;
+  }
+  .container-header {
+    margin: 0 30px;
+  }
+  .container {
+    margin: 0 50px;
   }
 }
 
-@media (max-width: 834px) {
-
+@media (max-width: 970px) {
+  .values__card-wrapper {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .values__card-wrapper .point-card {
+    max-width: 37%;
+    margin: 20px 0;
+  }
 }
 
-@media(max-width: 768px) {
-
+@media (max-width: 810px) {
+  .our-products__cards-wrapper .card__title {
+    min-height: 78px;
+  }
+  .our-products__cards-wrapper .card__description {
+    min-height: 190px;
+  }
 }
 
-@media(max-width: 414px) {
-
+@media(max-width: 690px) {
+  .our-products__cards-wrapper {
+    flex-wrap: wrap;
+  }
+  .our-products__cards-wrapper .card {
+    max-width: 100%;
+    margin-bottom: 50px;
+  }
+  .our-products__cards-wrapper .card__title {
+    min-height: unset;
+  }
+  .our-products__cards-wrapper .card__description {
+    min-height: unset;
+  }
+  .our-products__summary {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .our-products__summary .products-summary__sale, .our-products__summary .products-summary__table {
+    max-width: 100%;
+    width: 100%;
+  }
+  .our-products__summary .products-summary__sale {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .values__card-wrapper .point-card {
+    max-width: 100%;
+  }
+  .contacts__info-wrapper {
+    flex-wrap: wrap;
+  }
+  .contacts__info-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .container-header {
+    margin: 0 20px;
+  }
+  .container {
+    margin: 0 20px;
+  }
+  .header-wrapper {
+    padding: 10px 0;
+  }
+  .nav-title {
+    padding: 30px;
+  }
+  .nav-title, .top-content__title {
+    font-size: 30px;
+  }
+  .our-products__cards-wrapper .card__title {
+    font-size: 22px;
+  }
+  .our-products__cards-wrapper .card__description ul li {
+    font-size: 16px;
+  }
+  .values__card-wrapper .point-card__title {
+    min-height: unset;
+  }
+  .contacts__info-wrapper {
+    padding-bottom: 25px;
+  }
 }
 
-@media(max-width: 320px) {
-
+@media(max-width: 430px) {
+  .top-content {
+    min-height: 50vh;
+  }
+  .nav-title, .top-content__title {
+    font-size: 20px;
+  }
+  .header-wrapper__list-menu ul li a {
+    font-size: 14px;
+  }
+  .nav-title {
+    padding: 10px;
+    line-height: 1.5;
+  }
+  .our-products__cards-wrapper .card__title {
+    font-size: 16px;
+    margin: 15px 0;
+  }
+  .our-products__cards-wrapper .card__description ul li {
+    font-size: 14px;
+  }
+  .our-products__cards-wrapper .card__cost {
+    font-size: 16px;
+  }
+  .our-products__cards-wrapper .card__btn {
+    font-size: 16px;
+    min-width: 140px;
+  }
+  .our-products__summary .products-summary__sale, .our-products__summary .products-summary__table {
+    font-size: 16px;
+  }
+  .our-products__summary .products-summary__sale {
+    margin-bottom: 15px;
+  }
+  .our-products__summary .products-summary__header {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+  .our-products__summary .products-summary__table {
+    margin-bottom: 20px;
+  }
+  .values__card-wrapper .point-card {
+    margin: 10px 0;
+  }
+  .values__card-wrapper .point-card__title {
+    font-size: 18px;
+  }
+  .contacts__info-card .info-wrapper__inner, .values__card-wrapper .point-card__description {
+    font-size: 14px;
+  }
+  .link-call img, .link-whatsup img {
+    width: 40px;
+    height: 40px;
+  }
+  .link-call {
+    bottom: 90px;
+  }
+  .header-wrapper__title {
+    font-size: 24px;
+  }
+  .header-wrapper__burger-menu {
+    min-height: 20px;
+  }
+  .header-wrapper__burger-menu .burger-menu__stick {
+    width: 30px;
+    height: 2px;
+  }
+  .header-wrapper__burger-menu.opened .up-stick {
+    margin-top: 17px;
+  }
 }
