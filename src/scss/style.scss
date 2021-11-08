@@ -89,9 +89,43 @@ header {
 
   }
 
-  &__basket {
+  #basket {
+    position: relative;
+    background-color: transparent;
+    border: none;
 
+    img {
+      width: 50px;
+      object-fit: contain;
+    }
   }
+
+  #basket.with-products {
+    #basket-bubble, #basket-count {
+      position: absolute;
+
+    }
+
+    #basket-bubble {
+      top: 5px;
+      right: 0;
+      content: '';
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background-color: red;
+    }
+
+    #basket-count {
+      z-index: 1;
+      font-size: 11px;
+      color: white;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
 }
 
 .active {
@@ -357,5 +391,5 @@ header {
     filter: drop-shadow(0 2px 10px rgba(0, 0, 0, .5))
   }
 }
-
+@import "modal";
 @import "media";

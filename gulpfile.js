@@ -72,8 +72,6 @@ function indexScriptDev() {
 //Сборка всех JS в один файл
 function scriptsProd() {
     return gulp.src([
-        'node_modules/jquery/dist/jquery.min.js',
-        'node_modules/wow.js/dist/wow.min.js',
         './build/index.js'
     ])
         .pipe(concat('index.js'))
@@ -84,8 +82,6 @@ function scriptsProd() {
 //Сборка всех JS в один файл
 function scriptsDev() {
     return gulp.src([
-        'node_modules/jquery/dist/jquery.min.js',
-        'node_modules/wow.js/dist/wow.min.js',
         './build/index.js'
     ])
         .pipe(concat('index.js'))
