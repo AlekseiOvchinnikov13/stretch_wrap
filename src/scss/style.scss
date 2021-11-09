@@ -96,18 +96,15 @@ header {
     height: 50px;
     border: none;
 
-    /*img {
-      width: 50px;
-      object-fit: contain;
-    }*/
-
     #basket-count {
       position: absolute;
       font-size: 11px;
       line-height: 200%;
-      //transform: translate(-50%, -50%);
-      top: -10px;
-      right: -10px;
+      //top: -10px;
+      //right: -10px;
+      top: 0;
+      right: 0;
+      transform: translate(-50%, -50%);
       width: 25px;
       height: 25px;
       border-radius: 50%;
