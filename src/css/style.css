@@ -327,7 +327,8 @@ header {
   transition: opacity 200ms ease-in;
   margin: 0;
   padding: 0;
-  color: black; }
+  color: black;
+  display: none; }
 
 .visible {
   opacity: 1;
