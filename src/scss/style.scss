@@ -99,33 +99,26 @@ header {
       object-fit: contain;
     }
 
-    #basket-bubble, #basket-count {
-      position: absolute;
-    }
-  }
-
-  #basket.with-products {
-    #basket-bubble {
-
-    }
-
     #basket-count {
-      z-index: 1;
+      position: absolute;
       font-size: 11px;
       line-height: 200%;
-      color: white;
-      //left: 50%;
-      //top: 50%;
       transform: translate(-50%, -50%);
       top: 20px;
       right: -10px;
       width: 25px;
       height: 25px;
       border-radius: 50%;
-      background-color: red;
     }
   }
 
+  #basket.with-products {
+    #basket-count {
+      z-index: 1;
+      color: white;
+      background-color: red;
+    }
+  }
 }
 
 .active {
