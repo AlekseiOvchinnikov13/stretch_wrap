@@ -132,7 +132,7 @@ window.onload = () => {
                                             <input type="text" data-key='${wrapName}' min="1" maxlength="3" autocomplete="off" readonly value='${info.currentCount}'>
                                             <button class="incr">+</button>
                                         </div>
-                                        <div class="basket-card__price" data-key='${wrapName}'>${info.weight * info.price * info.currentCount}₽</div>
+                                        <div class="basket-card__price" data-key='${wrapName}'>${info.weight * info.price * info.currentCount}₽ | ${(info.weight * info.currentCount).toFixed(1)}кг</div>
                                     </div>
                                 </div>
                             </div>
@@ -149,7 +149,8 @@ window.onload = () => {
     const priceNode = document.querySelector(`.basket-card__price[data-key="${wrapName}"]`);
     if (!priceNode) return;
     const sum = info.weight * info.price * info.currentCount;
-    priceNode.innerHTML = sum + '₽';
+    const weight = (info.weight * info.currentCount).toFixed(1);
+    priceNode.innerHTML = `${sum}₽ | ${weight}кг`;
   }
   const addEventsDecrIncr = (arrayBtns, isIncr = false) => {
     arrayBtns.forEach(btn => {
