@@ -231,7 +231,7 @@
             <div class="modal-body">
                 <form id="my-form" action="https://formspree.io/f/moqyooqr" method="POST">
                     <div class="group-userdata form-group">
-                        <p class="group-userdata group-title">Ваши данные</p>
+                        <p class="group-title">Ваши данные</p>
                         <div class="input-wrapper">
                             <label for="username" class="required">Ваше имя</label>
                             <input type="text" id="username" placeholder="Иван Петров" required name="ФИО">
@@ -248,7 +248,7 @@
                         </div>
                     </div>
                     <div class="group-deliverydata form-group">
-                        <p class="group-deliverydata group-title">Получение заказа</p>
+                        <p class="group-title">Получение заказа</p>
                         <div class="input-wrapper">
                             <label for="receipt">Способ получения</label>
                             <select id="receipt" name="Способ получения">
@@ -271,7 +271,7 @@
                         </div>
                     </div>
                     <div class="group-paydata form-group">
-                        <p class="group-paydata group-title">Оплата</p>
+                        <p class="group-title">Оплата</p>
                         <div class="input-wrapper">
                             <label for="pay">Способ оплаты</label>
                             <select id="pay" name="Способ оплаты">
@@ -281,10 +281,15 @@
                         </div>
                     </div>
                     <div class="group-products form-group">
-                        <p class="group-products group-title">Состав заказа</p>
-                        <div class="input-wrapper">
-                            <textarea name="Товары" id="hidden-products" rows="20"></textarea>
+                        <p class="group-title">Состав заказа</p>
+                        <div class="input-wrapper" id="order-products-wrapper">
                         </div>
+                        <textarea name="Товары" id="hidden-products" rows="1"></textarea>
+                    </div>
+                    <div class="group-summary form-group">
+                        <p class="group-title">Итого к оплате</p>
+                        <p class="group-summary__cost"></p>
+                        <input type="text" id="total-cost" name="Итоговая сумма">
                     </div>
                     <p id="my-form-status"></p>
                 </form>

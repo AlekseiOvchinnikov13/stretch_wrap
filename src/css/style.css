@@ -419,7 +419,7 @@ header {
 .modal-body {
   position: relative;
   flex: 1 1 auto;
-  padding: 15px;
+  padding: 20px;
   overflow-y: auto; }
 
 @media (max-width: 650px) {
@@ -495,6 +495,56 @@ header {
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between; }
+  #my-form .group-summary.form-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; }
+    #my-form .group-summary.form-group .group-summary__cost {
+      font-size: 20px;
+      font-weight: 500; }
+    #my-form .group-summary.form-group #total-cost {
+      display: none; }
+  #my-form .group-products.form-group #order-products-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; }
+    #my-form .group-products.form-group #order-products-wrapper .order-card {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: flex-start;
+      justify-content: flex-start;
+      width: 100%;
+      margin: 10px 0; }
+      #my-form .group-products.form-group #order-products-wrapper .order-card__img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover; }
+      #my-form .group-products.form-group #order-products-wrapper .order-card__text-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 15px; }
+      #my-form .group-products.form-group #order-products-wrapper .order-card__product-name {
+        font-size: 24px;
+        line-height: 1;
+        margin-bottom: 5px; }
+      #my-form .group-products.form-group #order-products-wrapper .order-card__summary {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center; }
+      #my-form .group-products.form-group #order-products-wrapper .order-card__amount, #my-form .group-products.form-group #order-products-wrapper .order-card__price {
+        min-width: unset; }
+      #my-form .group-products.form-group #order-products-wrapper .order-card__amount {
+        color: rgba(0, 0, 0, 0.8); }
+      #my-form .group-products.form-group #order-products-wrapper .order-card__price {
+        font-weight: 500;
+        margin-left: 20px; }
+  #my-form .group-products.form-group #hidden-products {
+    display: none;
+    z-index: -99; }
   #my-form .form-group {
     width: 100%; }
     #my-form .form-group .required {

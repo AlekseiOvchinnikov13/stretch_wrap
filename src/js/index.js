@@ -217,6 +217,7 @@ window.onload = () => {
   const modalOrder = document.getElementById('modal-order');
   const orderModalClose = document.getElementById('order-modal-close');
   const productsArea = document.getElementById('hidden-products');
+  const wrapperContent = document.getElementById('order-products-wrapper');
 
   modalBtnOrder.addEventListener('click', () => {
     const count = Object.values(wrapperInfo).reduce((acc, wrap) =>
@@ -225,13 +226,34 @@ window.onload = () => {
       alert("Для заказа добавьте хотя бы один товар в корзину.");
       return;
     }
+
     modalOrder.classList.toggle('visible')
     productsArea.value = '';
-    Object.values(wrapperInfo).forEach(wrap => {
-      if (wrap.currentCount > 0)
-        productsArea.value += `Товар: ${wrap.name}; Кол-во: ${wrap.currentCount} шт;Сумма: ${wrap.price * wrap.currentCount * wrap.weight};`
+    wrapperContent.innerHTML = '';
+    let cost = 0;
+    Object.entries(wrapperInfo).forEach(element => {
+      const [wrapName, wrapInfo] = element;
+      if (wrapInfo.currentCount > 0) {
+        const sum = wrapInfo.price * wrapInfo.currentCount * wrapInfo.weight;
+        cost += sum;
+        productsArea.value += `Товар: ${wrapInfo.name}; Кол-во: ${wrapInfo.currentCount} шт.;Сумма: ${sum}руб.;
+         `;
+        wrapperContent.innerHTML += `
+          <div class="order-card">
+              <img src="img/${wrapName}.jpg" alt="${wrapInfo.name}" class="order-card__img">
+              <div class="order-card__text-wrapper">
+                  <p class="order-card__product-name">${wrapInfo.name}</p>
+                  <div class="order-card__summary">
+                      <p class="order-card__amount">Кол-во: <span>${wrapInfo.currentCount}</span></p>
+                      <p class="order-card__price">${sum} ₽</p>
+                  </div>
+              </div>
+          </div>
+        `;
+      }
+      document.querySelector('.group-summary__cost').innerHTML = `${cost} ₽`;
+      document.getElementById('total-cost').value = `${cost} ₽`;
     })
-
   })
 
 
