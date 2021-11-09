@@ -40,7 +40,7 @@ a {
   margin: 0 200px; }
 
 .nav-title {
-  font-size: 58px;
+  font-size: 24px;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
@@ -113,12 +113,11 @@ header {
     .header-wrapper #basket img {
       width: 50px;
       object-fit: contain; }
-  .header-wrapper #basket.with-products #basket-bubble, .header-wrapper #basket.with-products #basket-count {
-    position: absolute; }
+    .header-wrapper #basket #basket-bubble, .header-wrapper #basket #basket-count {
+      position: absolute; }
   .header-wrapper #basket.with-products #basket-bubble {
     top: 5px;
     right: 0;
-    content: '';
     width: 25px;
     height: 25px;
     border-radius: 50%;

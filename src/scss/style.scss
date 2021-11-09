@@ -98,18 +98,16 @@ header {
       width: 50px;
       object-fit: contain;
     }
+
+    #basket-bubble, #basket-count {
+      position: absolute;
+    }
   }
 
   #basket.with-products {
-    #basket-bubble, #basket-count {
-      position: absolute;
-
-    }
-
     #basket-bubble {
       top: 5px;
       right: 0;
-      content: '';
       width: 25px;
       height: 25px;
       border-radius: 50%;
