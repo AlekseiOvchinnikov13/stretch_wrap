@@ -257,7 +257,6 @@ window.onload = () => {
     })
   })
 
-
   modalOrder.addEventListener('click', e => {
     const target = e.target;
     if (target === modalOrder || target === orderModalClose) {
