@@ -271,7 +271,6 @@ window.onload = () => {
   async function handleSubmit(event) {
     event.preventDefault();
     btnAcceptOrder.disabled = true;
-    const status = document.getElementById("my-form-status");
     const data = new FormData(event.target);
 
     fetch(event.target.action, {
@@ -281,10 +280,11 @@ window.onload = () => {
         'Accept': 'application/json'
       }
     }).then(response => {
-      status.innerHTML = "Спасибо за заказ!";
-      form.reset()
+      btnAcceptOrder.innerHTML = "Спасибо за заказ!";
+      form.reset();
+      localStorage.clear();
     }).catch(error => {
-      status.innerHTML = "Что-то пошло не так."
+      btnAcceptOrder.innerHTML = "Что-то пошло не так."
     }).finally(() => {
       btnAcceptOrder.disabled = false;
       selectReceipt.dispatchEvent(new Event('change'));
@@ -324,6 +324,4 @@ window.onload = () => {
   checkAgree.addEventListener('click', e => {
     btnAcceptOrder.disabled = !e.target.checked;
   });
-
-
 };

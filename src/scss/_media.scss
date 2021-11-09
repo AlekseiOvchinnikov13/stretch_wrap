@@ -304,6 +304,42 @@
   .header-wrapper__burger-menu.opened .up-stick {
     margin-top: 17px;
   }
+  #my-form .form-group .group-title {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  #my-form .form-group .input-wrapper input, #my-form .form-group .input-wrapper label, #my-form .form-group .input-wrapper option, #my-form .form-group .input-wrapper p, #my-form .form-group .input-wrapper select {
+    font-size: 14px;
+  }
+  .modal-title {
+    font-size: 18px;
+  }
+  #my-form .group-products.form-group #order-products-wrapper .order-card__product-name {
+    font-size: 14px;
+  }
+  #my-form .group-products.form-group #order-products-wrapper .order-card__img {
+    width: 50px;
+    height: 50px;
+  }
+  #my-form .group-products.form-group #order-products-wrapper .order-card__amount, #my-form .group-products.form-group #order-products-wrapper .order-card__price {
+    font-size: 12px;
+  }
+  #my-form .group-summary.form-group .group-summary__cost {
+    font-size: 16px;
+  }
+  .modal-body {
+    padding: 10px;
+  }
+  .order {
+    font-size: 16px;
+    line-height: 40px;
+  }
+  .agree-wrapper #agree, .agree-wrapper #agree-text {
+    font-size: 10px;
+  }
+  #my-form .form-group .required:before {
+    left: -5px;
+  }
 }
 
 @media(max-width: 330px) {
