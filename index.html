@@ -115,11 +115,12 @@
                 <h6 class="card__title">Техническая пленка ПВД</h6>
                 <div class="card__description">
                     <ul>
-                        <li>Ширина пленки, мм 1500</li>
-                        <li>Толщина пленка, мкм 30-150</li>
-                        <li>Цвет: черный</li>
+                        <li>Ширина пленки, мкм 1500</li>
+                        <li>Толщина пленка, мкм 100</li>
+                        <li>Цвет: цветная</li>
                         <li>Состав: вторичные гранулы ПВД</li>
-                        <li>Длина рулона: 50-250 м</li>
+                        <li>Длина рулона: 100 м</li>
+                        <li>Вес нетто, кг: 27,6</li>
                     </ul>
                 </div>
                 <div class="card__footer">
@@ -135,13 +136,13 @@
             <div class="products-summary__table">
                 <div class="products-summary__header">Размер скидки зависит от суммы вашего заказа:</div>
                 <div class="products-summary__sale-sum">
-                    <span>от 20 000 руб.</span><span>-7%</span>
+                    <span>от 20 000 руб.</span><span>-3%</span>
                 </div>
                 <div class="products-summary__sale-sum">
-                    <span>от 40 000 руб.</span><span>-10%</span>
+                    <span>от 40 000 руб.</span><span>-5%</span>
                 </div>
                 <div class="products-summary__sale-sum">
-                    <span>от 60 000 руб.</span><span>-15%</span>
+                    <span>от 60 000 руб.</span><span>-7%</span>
                 </div>
             </div>
         </div>
@@ -228,10 +229,72 @@
                 <button id="order-modal-close" class="close">×</button>
             </div>
             <div class="modal-body">
-                <div id="order-content"></div>
+                <form id="my-form" action="https://formspree.io/f/moqyooqr" method="POST">
+                    <div class="group-userdata form-group">
+                        <p class="group-userdata group-title">Ваши данные</p>
+                        <div class="input-wrapper">
+                            <label for="username" class="required">Ваше имя</label>
+                            <input type="text" id="username" placeholder="Иван Петров" required name="ФИО">
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="phone" class="required">Телефон</label>
+                            <input type="tel" id="phone" placeholder="+7(9XX)XXX-XX-XX" required inputmode="tel"
+                                   name="Телефон">
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="email" class="required">E-mail</label>
+                            <input type="email" id="email" placeholder="example@email.ru" required inputmode="email"
+                                   name="Email">
+                        </div>
+                    </div>
+                    <div class="group-deliverydata form-group">
+                        <p class="group-deliverydata group-title">Получение заказа</p>
+                        <div class="input-wrapper">
+                            <label for="receipt">Способ получения</label>
+                            <select id="receipt" name="Способ получения">
+                                <option selected value="Самовывоз">Самовывоз</option>
+                                <option value="Доставка по Казани">Доставка по Казани</option>
+                                <option value="Доставка до терминала ТК">Доставка до терминала ТК</option>
+                            </select>
+                        </div>
+                        <div class="input-wrapper receipt-delivery">
+                            <label for="delivery-address">Адрес доставки</label>
+                            <input type="text" id="delivery-address" name="Адрес доставки">
+                        </div>
+                        <div class="input-wrapper receipt-delivery">
+                            <label for="comment">Комментарий</label>
+                            <input type="text" id="comment" name="Комментарий">
+                        </div>
+                        <div class="input-wrapper receipt-pickup">
+                            <label class="pickup-address-label">Адрес самовывоза</label>
+                            <p class="pickup-address-input">Респ. Татарстан, Казань, ул. Турбинная, д. 3, 420054</p>
+                        </div>
+                    </div>
+                    <div class="group-paydata form-group">
+                        <p class="group-paydata group-title">Оплата</p>
+                        <div class="input-wrapper">
+                            <label for="pay">Способ оплаты</label>
+                            <select id="pay" name="Способ оплаты">
+                                <option selected value="Наличными при получении">Наличными при получении</option>
+                                <option value="Картой при получении">Картой при получении</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="group-products form-group">
+                        <p class="group-products group-title">Состав заказа</p>
+                        <div class="input-wrapper">
+                            <textarea name="Товары" id="hidden-products" rows="20"></textarea>
+                        </div>
+                    </div>
+                    <p id="my-form-status"></p>
+                </form>
             </div>
             <div class="modal-footer">
-                <button class="order" id="btn-order-accept">Оформить заказ:</button>
+                <button type="submit" form="my-form" id="my-form-button" class="order">Подтвердить заказ</button>
+                <div class="agree-wrapper">
+                    <input type="checkbox" checked name="agree" id="agree" required>
+                    <span id="agree-text">Нажимая кнопку «Подтвердить заказ», Вы даете согласие на обработку персональной информации</span>
+                </div>
             </div>
         </div>
     </div>

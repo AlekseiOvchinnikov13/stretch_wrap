@@ -15,14 +15,14 @@ window.onload = () => {
     },
     wrap3: {
       name: 'Стрейч-пленка первичная, машинная',
-      price: 225,
+      price: 220,
       weight: 16,
       currentCount: 0
     },
     wrap4: {
       name: 'Техническая пленка ПВД',
       price: 120,
-      weight: 2,
+      weight: 27.6,
       currentCount: 0
     }
   }
@@ -197,12 +197,16 @@ window.onload = () => {
     } else {
       showEmptyBasket();
     }
+    body.classList.add('open-modal');
     modalBasket.classList.toggle('visible')
   });
 
   modalBasket.addEventListener('click', e => {
     const target = e.target;
     if (target === modalBasket || target === basketModalClose || target === modalBtnOrder) {
+      if (!(target === modalBtnOrder)) {
+        body.classList.remove('open-modal');
+      }
       modalBasket.classList.toggle('visible');
       modalBasket.classList.remove('empty-basket');
       modalBtnOrder.disabled = false;
@@ -211,6 +215,8 @@ window.onload = () => {
   });
 
   const modalOrder = document.getElementById('modal-order');
+  const orderModalClose = document.getElementById('order-modal-close');
+  const productsArea = document.getElementById('hidden-products');
 
   modalBtnOrder.addEventListener('click', () => {
     const count = Object.values(wrapperInfo).reduce((acc, wrap) =>
@@ -220,5 +226,82 @@ window.onload = () => {
       return;
     }
     modalOrder.classList.toggle('visible')
+    productsArea.value = '';
+    Object.values(wrapperInfo).forEach(wrap => {
+      if (wrap.currentCount > 0)
+        productsArea.value += `Товар: ${wrap.name}; Кол-во: ${wrap.currentCount} шт;Сумма: ${wrap.price * wrap.currentCount * wrap.weight};`
+    })
+
   })
+
+
+  modalOrder.addEventListener('click', e => {
+    const target = e.target;
+    if (target === modalOrder || target === orderModalClose) {
+      modalOrder.classList.toggle('visible');
+      body.classList.remove('open-modal');
+    }
+  });
+
+  const form = document.getElementById("my-form");
+  const btnAcceptOrder = document.getElementById('my-form-button');
+
+  async function handleSubmit(event) {
+    event.preventDefault();
+    btnAcceptOrder.disabled = true;
+    const status = document.getElementById("my-form-status");
+    const data = new FormData(event.target);
+
+    fetch(event.target.action, {
+      method: form.method,
+      body: data,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      status.innerHTML = "Спасибо за заказ!";
+      form.reset()
+    }).catch(error => {
+      status.innerHTML = "Что-то пошло не так."
+    }).finally(() => {
+      btnAcceptOrder.disabled = false;
+      selectReceipt.dispatchEvent(new Event('change'));
+    });
+  }
+
+  form.addEventListener("submit", handleSubmit)
+
+  const addClassesHidden = arrayNodes => {
+    arrayNodes.forEach(input => input.classList.add('hidden'));
+  }
+  const removeClassesHidden = arrayNodes => {
+    arrayNodes.forEach(input => input.classList.remove('hidden'));
+  }
+
+  const selectReceipt = document.getElementById('receipt');
+  selectReceipt.addEventListener('change', e => {
+      const receiptValue = e.target.value;
+      const inputsPickup = document.querySelectorAll('.receipt-pickup');
+      const inputsDelivery = document.querySelectorAll('.receipt-delivery');
+      const isPickup = receiptValue === 'Самовывоз';
+      addClassesHidden(isPickup ? inputsDelivery : inputsPickup);
+      removeClassesHidden(isPickup ? inputsPickup : inputsDelivery);
+
+      const deliveryAddress = document.querySelector('.receipt-delivery');
+      deliveryAddress.querySelector('input').required = !isPickup;
+      if (isPickup) {
+        deliveryAddress.querySelector('label').classList.remove('required');
+      } else {
+        deliveryAddress.querySelector('label').classList.add('required');
+      }
+    }
+  )
+  selectReceipt.dispatchEvent(new Event('change'));
+
+  const checkAgree = document.getElementById('agree');
+  checkAgree.addEventListener('click', e => {
+    btnAcceptOrder.disabled = !e.target.checked;
+  });
+
+
 };

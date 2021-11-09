@@ -136,6 +136,10 @@ header {
   }
 }
 
+.open-modal {
+  overflow: hidden;
+}
+
 .top-content {
   background-image: url('../img/bottle.png');
   background-position: center bottom;
@@ -474,4 +478,5 @@ header {
   }
 }
 
+@import "form";
 @import "media";

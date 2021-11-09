@@ -136,6 +136,9 @@ header {
   .active .header-wrapper__list-menu {
     left: 0; }
 
+.open-modal {
+  overflow: hidden; }
+
 .top-content {
   background-image: url("../img/bottle.png");
   background-position: center bottom;
@@ -335,19 +338,22 @@ header {
 
 .modal:target {
   opacity: 1;
-  pointer-events: auto;
-  overflow-y: auto; }
+  pointer-events: auto; }
 
 .modal-dialog {
   position: relative;
   width: auto;
-  margin: 10px; }
+  margin: 10px;
+  overflow: hidden; }
 
 @media (min-width: 650px) {
   .modal-dialog {
     max-width: 750px;
+    min-width: 700px;
     max-height: 90vh;
-    overflow-y: auto;
+    min-height: 70vh;
+    width: 100%;
+    height: 100%;
     margin: 30px auto; } }
 
 .modal-content {
@@ -358,7 +364,8 @@ header {
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 0.3rem;
-  outline: 0; }
+  outline: 0;
+  height: 100%; }
 
 @media (min-width: 768px) {
   .modal-content {
@@ -368,12 +375,12 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 50px;
+  height: 60px;
   border-bottom: 1px solid #eceeef;
   padding: 10px; }
 
 .modal-footer {
-  border-bottom: 1px solid #eceeef;
+  border-top: 1px solid #eceeef;
   padding: 15px; }
 
 .order {
@@ -413,7 +420,7 @@ header {
   position: relative;
   flex: 1 1 auto;
   padding: 15px;
-  overflow: auto; }
+  overflow-y: auto; }
 
 @media (max-width: 650px) {
   .modal-content {
@@ -480,6 +487,76 @@ header {
   #basket-content .basket-card__delete {
     background-color: transparent;
     border: none; }
+
+#my-form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between; }
+  #my-form .form-group {
+    width: 100%; }
+    #my-form .form-group .required {
+      position: relative; }
+      #my-form .form-group .required:before {
+        content: '*';
+        color: red;
+        left: -10px;
+        top: 0;
+        position: absolute; }
+    #my-form .form-group .group-title {
+      font-size: 24px;
+      line-height: 1.5;
+      font-weight: 500;
+      margin: 20px 0; }
+    #my-form .form-group .input-wrapper + .input-wrapper {
+      margin-top: 15px; }
+    #my-form .form-group .input-wrapper.hidden {
+      display: none; }
+    #my-form .form-group .input-wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%; }
+      #my-form .form-group .input-wrapper label {
+        min-width: 40%; }
+      #my-form .form-group .input-wrapper label, #my-form .form-group .input-wrapper input, #my-form .form-group .input-wrapper select, #my-form .form-group .input-wrapper p, #my-form .form-group .input-wrapper option {
+        font-size: 20px;
+        line-height: 1.5; }
+      #my-form .form-group .input-wrapper input, #my-form .form-group .input-wrapper select {
+        border-radius: 4px;
+        border: 1px solid rgba(0, 0, 0, 0.5);
+        padding: 3px 6px; }
+      #my-form .form-group .input-wrapper input, #my-form .form-group .input-wrapper select, #my-form .form-group .input-wrapper p {
+        color: black;
+        min-width: 60%; }
+      #my-form .form-group .input-wrapper input::placeholder {
+        color: rgba(0, 0, 0, 0.7); }
+  #my-form #my-form-status {
+    align-self: center;
+    font-size: 30px;
+    line-height: 1.5; }
+
+#my-form-button:disabled {
+  background-color: rgba(0, 0, 0, 0.5); }
+
+.agree-wrapper {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  min-height: 25px;
+  margin-top: 10px; }
+  .agree-wrapper #agree-text, .agree-wrapper #agree {
+    font-size: 14px;
+    line-height: 1; }
+  .agree-wrapper #agree {
+    border-radius: 5px;
+    margin-right: 5px;
+    cursor: pointer; }
 
 @media (max-width: 1830px) {
   .values__card-wrapper .point-card {
