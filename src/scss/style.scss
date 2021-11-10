@@ -9,7 +9,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 30px 0;
+  padding: 30px 100px;
+  width: 100%;
 
   &__burger-menu {
     display: flex;
@@ -50,10 +51,10 @@ header {
   &__list-menu {
     position: absolute;
     z-index: 2;
-    left: -100%;
+    left: -100vw;
     top: 0;
     height: 100vh;
-    min-width: 40%;
+    min-width: 40vw;
 
     transition: all .4s ease;
     background-color: #c9cfd1;
@@ -86,14 +87,13 @@ header {
     line-height: 100%;
     font-weight: 400;
     text-transform: uppercase;
-
   }
 
   #basket {
     position: relative;
     background: url(../img/basket.png) no-repeat center / contain;
-    width: 45px;
-    height: 45px;
+    width: 35px;
+    height: 35px;
     border: none;
 
     #basket-count {
@@ -101,6 +101,7 @@ header {
       font-size: 11px;
       line-height: 200%;
       top: 5px;
+      left: 30px;
       right: 0;
       transform: translate(-50%, -50%);
       width: 25px;
@@ -464,6 +465,7 @@ header {
     &__delete {
       background-color: transparent;
       border: none;
+      font-size: 40px;
     }
   }
 }

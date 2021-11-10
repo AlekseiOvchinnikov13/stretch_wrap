@@ -6,13 +6,16 @@
 
 @media (max-width: 1440px) {
   .header-wrapper__list-menu {
-    min-width: 50%;
+    min-width: 50vw;
   }
   .container {
     margin: 0 125px;
   }
   .container-header {
     margin: 0 50px;
+  }
+  .header-wrapper {
+    padding: 25px 50px;
   }
 }
 
@@ -124,7 +127,7 @@
 
 @media (max-width: 1024px) {
   .header-wrapper__list-menu {
-    min-width: 100%;
+    min-width: 100vw;
   }
   .top-content {
     background-position: center;
@@ -136,6 +139,9 @@
   }
   .container {
     margin: 0 50px;
+  }
+  .header-wrapper {
+    padding: 20px 30px;
   }
 }
 
@@ -202,7 +208,7 @@
     margin: 0 20px;
   }
   .header-wrapper {
-    padding: 10px 0;
+    padding: 10px 20px;
   }
   .nav-title {
     padding: 30px;
@@ -231,6 +237,9 @@
   #basket-content .basket-card__img {
     width: 60px;
     height: 60px;
+  }
+  #basket-content .basket-card__delete {
+    font-size: 30px;
   }
 }
 
@@ -339,6 +348,14 @@
   }
   #my-form .form-group .required:before {
     left: -5px;
+  }
+  .basket-card__price span {
+    display: none;
+  }
+  .header-wrapper #basket #basket-count {
+    width: 18px;
+    height: 18px;
+    font-size: 9px;
   }
 }
 

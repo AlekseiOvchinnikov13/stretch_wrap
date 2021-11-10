@@ -6,9 +6,7 @@ html {
 
 body, html {
   position: relative;
-  scroll-behavior: smooth;
-  overflow-x: unset;
-  height: unset; }
+  scroll-behavior: smooth; }
 
 body {
   position: relative;
@@ -20,8 +18,8 @@ body {
   overflow-x: hidden;
   font-family: Montserrat, sans-serif;
   font-style: normal;
-  font-size: 50px;
-  line-height: 61px;
+  font-size: 20px;
+  line-height: 1.5;
   margin: 0 auto; }
 
 ul, li {
@@ -53,7 +51,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 30px 0; }
+  padding: 30px 100px;
+  width: 100%; }
   .header-wrapper__burger-menu {
     display: flex;
     flex-direction: column;
@@ -80,10 +79,10 @@ header {
   .header-wrapper__list-menu {
     position: absolute;
     z-index: 2;
-    left: -100%;
+    left: -100vw;
     top: 0;
     height: 100vh;
-    min-width: 40%;
+    min-width: 40vw;
     transition: all .4s ease;
     background-color: #c9cfd1;
     display: flex;
@@ -109,14 +108,15 @@ header {
   .header-wrapper #basket {
     position: relative;
     background: url(../img/basket.png) no-repeat center/contain;
-    width: 45px;
-    height: 45px;
+    width: 35px;
+    height: 35px;
     border: none; }
     .header-wrapper #basket #basket-count {
       position: absolute;
       font-size: 11px;
       line-height: 200%;
       top: 5px;
+      left: 30px;
       right: 0;
       transform: translate(-50%, -50%);
       width: 25px;
@@ -484,7 +484,8 @@ header {
       text-align: center; }
   #basket-content .basket-card__delete {
     background-color: transparent;
-    border: none; }
+    border: none;
+    font-size: 40px; }
 
 #my-form {
   width: 100%;
@@ -608,11 +609,13 @@ header {
 
 @media (max-width: 1440px) {
   .header-wrapper__list-menu {
-    min-width: 50%; }
+    min-width: 50vw; }
   .container {
     margin: 0 125px; }
   .container-header {
-    margin: 0 50px; } }
+    margin: 0 50px; }
+  .header-wrapper {
+    padding: 25px 50px; } }
 
 @media (max-width: 1366px) {
   .header-wrapper__title {
@@ -689,7 +692,7 @@ header {
 
 @media (max-width: 1024px) {
   .header-wrapper__list-menu {
-    min-width: 100%; }
+    min-width: 100vw; }
   .top-content {
     background-position: center;
     background-size: cover;
@@ -697,7 +700,9 @@ header {
   .container-header {
     margin: 0 30px; }
   .container {
-    margin: 0 50px; } }
+    margin: 0 50px; }
+  .header-wrapper {
+    padding: 20px 30px; } }
 
 @media (max-width: 970px) {
   .values__card-wrapper {
@@ -744,7 +749,7 @@ header {
   .container {
     margin: 0 20px; }
   .header-wrapper {
-    padding: 10px 0; }
+    padding: 10px 20px; }
   .nav-title {
     padding: 30px; }
   .nav-title, .top-content__title {
@@ -763,7 +768,9 @@ header {
     font-size: 16px; }
   #basket-content .basket-card__img {
     width: 60px;
-    height: 60px; } }
+    height: 60px; }
+  #basket-content .basket-card__delete {
+    font-size: 30px; } }
 
 @media (max-width: 430px) {
   .top-content {
@@ -838,7 +845,13 @@ header {
   .agree-wrapper #agree, .agree-wrapper #agree-text {
     font-size: 10px; }
   #my-form .form-group .required:before {
-    left: -5px; } }
+    left: -5px; }
+  .basket-card__price span {
+    display: none; }
+  .header-wrapper #basket #basket-count {
+    width: 18px;
+    height: 18px;
+    font-size: 9px; } }
 
 @media (max-width: 330px) {
   #basket-content .basket-card__name, #basket-content .basket-card__range-block {

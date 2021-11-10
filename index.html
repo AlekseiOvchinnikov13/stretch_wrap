@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <title>Стрейч-пленка</title>
-    <link rel="stylesheet" href="build/style.css" media="none" onload="if(media!='all')media='all'">
+    <link rel="stylesheet" href="build/style.css">
     <noscript>
         <link rel="stylesheet" href="build/style.css">
     </noscript>
@@ -18,12 +18,18 @@
 <body>
 
 <header>
-    <div class="header-wrapper container-header">
+    <div class="header-wrapper ">
         <div class="header-wrapper__burger-menu" id="menu">
             <span class="burger-menu__stick up-stick"></span>
             <span class="burger-menu__stick middle-stick"></span>
             <span class="burger-menu__stick bottom-stick"></span>
         </div>
+        <h1 class="header-wrapper__title">
+            пленка
+        </h1>
+        <button class="header-wrapper__basket" id="basket">
+            <span id="basket-count"></span>
+        </button>
         <nav class="header-wrapper__list-menu" id="nav">
             <ul>
                 <li>
@@ -37,12 +43,6 @@
                 </li>
             </ul>
         </nav>
-        <h1 class="header-wrapper__title">
-            пленка
-        </h1>
-        <button class="header-wrapper__basket" id="basket">
-            <span id="basket-count"></span>
-        </button>
     </div>
 </header>
 <main>

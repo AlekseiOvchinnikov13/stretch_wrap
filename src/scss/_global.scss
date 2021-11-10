@@ -9,8 +9,6 @@ html {
 body, html {
   position: relative;
   scroll-behavior: smooth;
-  overflow-x: unset;
-  height: unset;
 }
 
 body {
@@ -23,8 +21,8 @@ body {
   overflow-x: hidden;
   font-family: Montserrat, sans-serif;
   font-style: normal;
-  font-size: 50px;
-  line-height: 61px;
+  font-size: 20px;
+  line-height: 1.5;
   margin: 0 auto;
 }
 
