@@ -387,7 +387,7 @@ window.onload = () => {
 
     if (priceNode) {
       const weight = (wrap.weight * wrap.currentCount).toFixed(1);
-      priceNode.innerHTML = `${sum}₽ <span>|<span> ${weight}кг`;
+      priceNode.innerHTML = `${sum}₽ <span>|</span> ${weight}кг`;
     }
     updateBtnConfirm();
   }
@@ -426,6 +426,7 @@ window.onload = () => {
     body.classList.add('open-modal');
     modalBasket.classList.toggle('visible')
   });
+
   modalBasket.addEventListener('click', e => {
     const target = e.target;
     if (target === modalBasket || target === basketModalClose || target === modalBtnOrder) {
