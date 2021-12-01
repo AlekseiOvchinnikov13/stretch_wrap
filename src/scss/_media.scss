@@ -20,16 +20,12 @@
 }
 
 @media (max-width: 1366px) {
-  .header-wrapper__title {
-    font-size: 40px;
-  }
   .header-wrapper__list-menu ul li a {
     font-size: 24px;
   }
   .top-content__title, .nav-title {
     font-size: 48px;
   }
-
   .our-products__cards-wrapper .card__title {
     font-size: 30px;
     min-height: 60px;
@@ -89,7 +85,7 @@
     padding: 50px;
   }
   .header-wrapper__title {
-    font-size: 30px;
+    font-size: 24px;
   }
   .header-wrapper__list-menu ul li a {
     font-size: 20px;
@@ -154,6 +150,18 @@
     max-width: 37%;
     margin: 20px 0;
   }
+  .header-wrapper__title {
+    font-size: 18px;
+  }
+  .header-wrapper__title p:after {
+    height: 50px;
+  }
+  .production__video-wrapper iframe {
+    width: 100%;
+  }
+  .production__video-wrapper iframe + iframe {
+    margin-top: 40px;
+  }
 }
 
 @media (max-width: 810px) {
@@ -162,6 +170,13 @@
   }
   .our-products__cards-wrapper .card__description {
     min-height: 190px;
+  }
+  .header-wrapper__title p {
+    display: none;
+  }
+  .header-wrapper__title img {
+    width: 45%;
+    padding-right: 0;
   }
 }
 
@@ -193,9 +208,6 @@
   }
   .values__card-wrapper .point-card {
     max-width: 100%;
-  }
-  .contacts__info-wrapper {
-    flex-wrap: wrap;
   }
   .contacts__info-card {
     width: 100%;
@@ -244,6 +256,12 @@
 }
 
 @media(max-width: 430px) {
+  .production__video-wrapper iframe {
+    min-height: 200px;
+  }
+  .header-wrapper__title img {
+    width: 50%;
+  }
   .top-content {
     min-height: 50vh;
   }

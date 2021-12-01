@@ -83,10 +83,39 @@ header {
   }
 
   &__title {
-    font-size: 50px;
+    font-size: 30px;
     line-height: 100%;
-    font-weight: 400;
-    text-transform: uppercase;
+    font-weight: 700;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 30%;
+      padding-right: 50px;
+    }
+
+    p {
+      padding-left: 40px;
+      position: relative;
+
+      &:after {
+        content: '';
+        height: 65px;
+        width: 1px;
+        position: absolute;
+        background-color: black;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      span {
+        display: block;
+      }
+    }
   }
 
   #basket {
@@ -272,6 +301,21 @@ header {
   }
 }
 
+.production {
+  &__video-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    iframe {
+      width: 45%;
+      min-height: 300px;
+    }
+  }
+}
+
 .values {
   &__card-wrapper {
     display: flex;
@@ -319,18 +363,20 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 
     padding-bottom: 150px;
   }
 
   a.contacts__info-card {
     cursor: pointer;
-
   }
 
   &__info-card {
     display: flex;
     align-items: center;
+    margin: 10px 5px;
+    min-width: 32%;
 
     .info-wrapper__inner {
       font-size: 26px;
